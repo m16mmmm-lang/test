@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-  <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างเว็บไซต์รวม HTML, CSS และ JS</title>
+    
+    <!-- ส่วนของ CSS ใช้สำหรับตกแต่งหน้าตาเว็บไซต์ -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .card {
+            background-color: white;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 24px;
+        }
+        p {
+            color: #7f8c8d;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            button:hover { background-color: #2980b9; }
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
 </head>
 <body>
-  <h1>สวัสดีครับ นี่คือเว็บฟรีของผม!</h1>
-  <p>ทำด้วย GitHub Pages 🚀</p>
-  <p>Update 2026</p>
+
+    <!-- ส่วนของ HTML กำหนดโครงสร้างหน้าเว็บ -->
+    <div class="card">
+        <h1>ยินดีต้อนรับสู่เว็บแรกของฉัน</h1>
+        <p>นี่คือตัวอย่างการเขียนโค้ดหลายภาษาในไฟล์เดียว</p>
+        
+        <button id="clickBtn">คลิกเพื่อทักทาย</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- ส่วนของ JavaScript ใช้ควบคุมการทำงานและโต้ตอบกับผู้ใช้ -->
+    <script>
+        // ดึงปุ่มและพื้นที่แสดงผลมาจาก HTML
+        const btn = document.getElementById('clickBtn');
+        const resultDiv = document.getElementById('result');
+
+        // กำหนดเหตุการณ์เมื่อผู้ใช้คลิกปุ่ม
+        btn.addEventListener('click', function() {
+            resultDiv.textContent = '🎉 สวัสดีครับ! คุณกดปุ่มสำเร็จแล้ว เยี่ยมมาก!';
+        });
+    </script>
+
 </body>
 </html>
